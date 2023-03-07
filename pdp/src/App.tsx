@@ -12,15 +12,17 @@ const Header = React.lazy(() => {
     )
   );
 });
-
+import SafeComponent from "./SafeComponent";
 import "./index.scss";
 
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
     <div>Name: pdp</div>
     <Suspense fallback={<div>loading ...</div>}>
-      <Header />
-      <Footer />
+      <SafeComponent>
+        <Header />
+        <Footer />
+      </SafeComponent>
     </Suspense>
   </div>
 );
