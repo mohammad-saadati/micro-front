@@ -1,9 +1,9 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({name}) => {
   return (
     <>
-      <div>header from microfrontend</div>
+      <div>{name}: header from microfrontend</div>
       <div>header is changed</div>
     </>
   );
